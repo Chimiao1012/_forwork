@@ -1250,6 +1250,7 @@ body {
   .case1 {
     ul {
       display: flex;
+      flex-wrap: wrap;
       position: relative;
       margin-bottom: 40px;
 
@@ -1275,8 +1276,10 @@ body {
       }
     }
   }
-  .group3{
+
+  .group3 {
     display: flex;
+    flex-wrap: wrap;
     margin: 0 -10px 40px;
 
     li {
@@ -1297,42 +1300,25 @@ body {
       }
     }
   }
-  .group3-1-2 {
 
-    li {
-      width: calc(100% / 3);
-      padding: 0 10px;
-      box-sizing: border-box;
+
+  li.twoInOne {
+    width: calc(100% / 3 * 2);
+
+    .listBox {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -10px;
 
       .list {
-        position: relative;
-
-        .pic {
-          line-height: 0;
-
-          img {
-            width: 100%;
-          }
-        }
-      }
-
-      &:nth-child(2){
-        width: calc(100% / 3 * 2);
-        li{
-          padding: 0px;}
-        .listBox{
-          display: flex;
-          margin: 0 -10px;
-        }
-        .list{
-          box-sizing: border-box;
-          width: 50%;
-          padding: 0 10px;
-        }
+        box-sizing: border-box;
+        width: 50%;
+        padding: 0 10px;
       }
     }
   }
- .picMove {
+
+  .picMove {
     .pic {
       line-height: 0;
       position: relative;
@@ -1353,6 +1339,62 @@ body {
     }
   }
 }
+
+@media screen and (max-width: 1280px) {
+  .outsourcing {
+    padding-right: 20px;
+    padding-left: 52px;
+
+    .group3 {
+
+      li {
+        width: 50%;
+        padding-bottom: 20px;
+
+        &.twoInOne {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .outsourcing {
+    .case1 {
+      ul {
+        li {
+          width: calc(100% / 3);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .outsourcing {
+    .case1 {
+      ul {
+        li {
+          width: 50%;
+        }
+      }
+    }
+
+    .group3 {
+      li {
+        width: 100%;
+
+        &.twoInOne {
+          .list {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
 //////////////////////////////////////////////////////////////
 .contact {
   padding-top: 21vh;

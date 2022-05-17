@@ -1431,6 +1431,8 @@ body a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   position: relative;
   margin-bottom: 40px;
 }
@@ -1459,6 +1461,8 @@ body a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0 -10px 40px;
 }
 
@@ -1481,41 +1485,20 @@ body a:hover {
   width: 100%;
 }
 
-.outsourcing .group3-1-2 li {
-  width: calc(100% / 3);
-  padding: 0 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.outsourcing .group3-1-2 li .list {
-  position: relative;
-}
-
-.outsourcing .group3-1-2 li .list .pic {
-  line-height: 0;
-}
-
-.outsourcing .group3-1-2 li .list .pic img {
-  width: 100%;
-}
-
-.outsourcing .group3-1-2 li:nth-child(2) {
+.outsourcing li.twoInOne {
   width: calc(100% / 3 * 2);
 }
 
-.outsourcing .group3-1-2 li:nth-child(2) li {
-  padding: 0px;
-}
-
-.outsourcing .group3-1-2 li:nth-child(2) .listBox {
+.outsourcing li.twoInOne .listBox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0 -10px;
 }
 
-.outsourcing .group3-1-2 li:nth-child(2) .list {
+.outsourcing li.twoInOne .listBox .list {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 50%;
@@ -1542,6 +1525,38 @@ body a:hover {
           transform: translateY(0%);
   -webkit-transition: all 3s linear;
   transition: all 3s linear;
+}
+
+@media screen and (max-width: 1280px) {
+  .outsourcing {
+    padding-right: 20px;
+    padding-left: 52px;
+  }
+  .outsourcing .group3 li {
+    width: 50%;
+    padding-bottom: 20px;
+  }
+  .outsourcing .group3 li.twoInOne {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .outsourcing .case1 ul li {
+    width: calc(100% / 3);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .outsourcing .case1 ul li {
+    width: 50%;
+  }
+  .outsourcing .group3 li {
+    width: 100%;
+  }
+  .outsourcing .group3 li.twoInOne .list {
+    width: 100%;
+  }
 }
 
 .contact {
