@@ -30,6 +30,7 @@ function picMove(elm) {
 }
 
 function sectionPositionCheck() {
+  sectionPosition = [];
   $('.section').each(function () {
     let currSect = $(this);
     let currSectTop = currSect.offset().top;
