@@ -684,12 +684,18 @@ body a:hover {
   padding-right: 15px;
   margin-bottom: 5px;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .skill .skillBox ul li::before {
   content: '';
   position: absolute;
-  top: 8px;
+  top: 10px;
   right: 0;
   width: 6px;
   height: 6px;
@@ -698,44 +704,46 @@ body a:hover {
   background: #439cee;
 }
 
+.skill .starBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 5px 0 0;
+}
+
+.skill .starBox .star {
+  width: 8px;
+  height: 8px;
+  margin: 0 2px;
+  fill: #ebc20d;
+}
+
 .about.active .conBox .pic {
   opacity: 1;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1480px) {
   .about .conBox .sideBox {
     width: 60%;
   }
   .about .conBox .pic {
     width: 40%;
   }
-  .about .conBox .pic img {
+}
+
+@media screen and (max-width: 1280px) {
+  .about .conBox .sideBox {
+    width: 80%;
+  }
+  .about .conBox .pic {
+    width: 20%;
     height: 100vh;
   }
-  .skill .skillBox {
-    padding: 20px 0 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .skill .skillBox .list {
-    width: 100%;
-  }
-  .skill .skillBox ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-    margin-bottom: 15px;
-  }
-  .skill .skillBox ul li {
-    padding-left: 20px;
+  .about .conBox .pic img {
+    height: 100vh;
   }
 }
 
@@ -753,7 +761,7 @@ body a:hover {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .about .conBox .sideBox {
     width: 90%;
   }
@@ -764,6 +772,26 @@ body a:hover {
   .about .conBox .pic img {
     width: auto !important;
     height: 100vh;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .skill .skillBox {
+    padding: 20px 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .skill .skillBox .list {
+    width: 50%;
+  }
+  .skill .skillBox .list .listTitle {
+    margin-bottom: 5px;
+  }
+  .skill .skillBox ul {
+    margin-bottom: 20px;
   }
 }
 

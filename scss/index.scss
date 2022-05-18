@@ -505,11 +505,13 @@ body {
         padding-right: 15px;
         margin-bottom: 5px;
         position: relative;
+        display: flex;
+        justify-content: flex-end;
 
         &::before {
           content: '';
           position: absolute;
-          top: 8px;
+          top: 10px;
           right: 0;
           width: 6px;
           height: 6px;
@@ -520,7 +522,17 @@ body {
       }
     }
   }
-}
+  .starBox{
+    display: flex;
+    align-items: center;
+    margin: 0 5px 0 0;
+  .star{
+    width: 8px;
+    height: 8px;
+    margin: 0 2px;
+    fill:#ebc20d;
+  }
+}}
 
 .about.active {
   .conBox {
@@ -530,7 +542,7 @@ body {
   }
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1480px) {
   .about {
     .conBox {
       .sideBox {
@@ -539,6 +551,20 @@ body {
 
       .pic {
         width: 40%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1280px) {
+  .about {
+    .conBox {
+      .sideBox {
+        width: 80%;
+      }
+
+      .pic {
+        width: 20%;
+        height: 100vh;
 
         img {
           height: 100vh;
@@ -547,27 +573,27 @@ body {
     }
   }
 
-  .skill {
-    .skillBox {
-      padding: 20px 0 0;
-      flex-direction: column;
+  // .skill {
+  //   .skillBox {
+  //     padding: 20px 0 0;
+  //     flex-direction: column;
 
-      .list {
-        width: 100%;
-      }
+  //     .list {
+  //       width: 100%;
+  //     }
 
-      ul {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row-reverse;
-        margin-bottom: 15px;
+  //     ul {
+  //       display: flex;
+  //       flex-wrap: wrap;
+  //       flex-direction: row-reverse;
+  //       margin-bottom: 15px;
 
-        li {
-          padding-left: 20px;
-        }
-      }
-    }
-  }
+  //       li {
+  //         padding-left: 20px;
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 @media screen and (max-width: 1100px) {
@@ -590,7 +616,7 @@ body {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .about {
     .conBox {
       .sideBox {
@@ -605,6 +631,27 @@ body {
           width: auto !important;
           height: 100vh;
         }
+      }
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  
+  .skill {
+    .skillBox {
+      padding: 20px 0 0;
+      display: flex;
+      flex-wrap: wrap;
+
+      .list {
+        width: 50%;
+        .listTitle{
+          margin-bottom: 5px;
+        }
+      }
+
+      ul {
+        margin-bottom: 20px;
       }
     }
   }
