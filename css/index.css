@@ -753,29 +753,16 @@ body a:hover {
   }
   .about .conBox .pic {
     width: 20%;
-    height: 100vh;
-  }
-  .about .conBox .pic img {
-    width: auto !important;
-    height: 100vh;
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
   .about .conBox .sideBox {
     width: 90%;
   }
   .about .conBox .pic {
     width: 10%;
-    height: 100vh;
   }
-  .about .conBox .pic img {
-    width: auto !important;
-    height: 100vh;
-  }
-}
-
-@media screen and (max-width: 800px) {
   .skill .skillBox {
     padding: 20px 0 0;
     display: -webkit-box;

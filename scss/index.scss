@@ -572,28 +572,6 @@ body {
       }
     }
   }
-
-  // .skill {
-  //   .skillBox {
-  //     padding: 20px 0 0;
-  //     flex-direction: column;
-
-  //     .list {
-  //       width: 100%;
-  //     }
-
-  //     ul {
-  //       display: flex;
-  //       flex-wrap: wrap;
-  //       flex-direction: row-reverse;
-  //       margin-bottom: 15px;
-
-  //       li {
-  //         padding-left: 20px;
-  //       }
-  //     }
-  //   }
-  // }
 }
 
 @media screen and (max-width: 1100px) {
@@ -605,18 +583,12 @@ body {
 
       .pic {
         width: 20%;
-        height: 100vh;
-
-        img {
-          width: auto !important;
-          height: 100vh;
-        }
       }
     }
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
   .about {
     .conBox {
       .sideBox {
@@ -625,17 +597,9 @@ body {
 
       .pic {
         width: 10%;
-        height: 100vh;
-
-        img {
-          width: auto !important;
-          height: 100vh;
-        }
       }
     }
   }
-}
-@media screen and (max-width: 800px) {
   
   .skill {
     .skillBox {
