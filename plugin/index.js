@@ -75,20 +75,24 @@ function experience() {
     }
   });
 }
-  $(window).on('load scroll resize', function () {
-    windowScrollTop = $(window).scrollTop();
-    windowWidth = $(window).width();
-    sectionPositionCheck();
-    experience();
-  });
+$(window).on('load scroll resize', function () {
+  windowScrollTop = $(window).scrollTop();
+  windowWidth = $(window).width();
+  sectionPositionCheck();
+  experience();
+});
 
-  $('.menu li,.side li').click(function () {
-    let menuLiLength = $(this).index() + 1;
-    $('.menu li,.side li').removeClass('active');
-    $(this).addClass('active');
-    $('html').animate({
-        scrollTop: sectionPosition[menuLiLength] + 50,
-      },
-      1000
-    );
-  });
+$('.menu li,.side li').click(function () {
+  let menuLiLength = $(this).index() + 1;
+  $('.menu li,.side li').removeClass('active');
+  $(this).addClass('active');
+  $('html').animate({
+      scrollTop: sectionPosition[menuLiLength] + 50,
+    },
+    1000
+  );
+});
+
+$(function () {
+  picMove('.picMove .pic')
+})
